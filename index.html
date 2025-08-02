@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galaxy Study Buddy</title>
+  <!-- Ruigslay font from CDN -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ruigslay" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <!-- Starfield background container -->
+  <div id="starfield"></div>
+
+  <!-- Nebula parallax layers -->
+  <img src="assets/nebula-front.png" class="nebula front" aria-hidden="true" />
+  <img src="assets/nebula-back.png" class="nebula back" aria-hidden="true" />
+
+  <!-- Hamburger menu icon, disabled until locked in -->
+  <button id="mainMenuBtn" class="hamburger" disabled aria-label="Open menu">&#9776;</button>
+
+  <!-- Pixel Cat Buddy -->
+  <img src="assets/myu.gif" id="buddy" alt="Pixel Cat Buddy" />
+
+  <!-- Side Menu - hidden by default -->
+  <nav id="sideMenu" class="hidden" aria-label="Main menu">
+    <ul>
+      <li><button class="nav-link" data-view="music">Music</button></li>
+      <li><button class="nav-link" data-view="doubts">AI Doubt Solver</button></li>
+      <li><button class="nav-link" data-view="summarizer">Notes Summarizer</button></li>
+      <li><button class="nav-link" data-view="hints">Assignment Hints</button></li>
+      <li><button class="nav-link" data-view="pomodoro">Pomodoro Timer</button></li>
+      <li><button class="nav-link" data-view="flashcards">Flashcard Maker</button></li>
+    </ul>
+  </nav>
+
+  <!-- Lock In button (starts music, enables menu) -->
+  <button id="lockBtn" aria-label="Lock in and start studying">Lock In</button>
+
+  <!-- Background music audio tag -->
+  <audio id="bgm" src="assets/lofi.mp3" loop preload="auto"></audio>
+  <audio id="clickSound" src="assets/click.mp3" preload="auto"></audio>   
+  <audio id="notificationSound" src="assets/notification.mp3" preload="auto"></audio> 
+  <!-- Volume control and resume button (for browsers blocking autoplay) -->
+  <div id="volumeControl" aria-label="Audio volume control">
+    <label for="volumeKnob">Volume</label>
+    <input
+      type="range"
+      id="volumeKnob"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.6"
+      aria-valuemin="0"
+      aria-valuemax="1"
+      aria-valuenow="0.6"
+    />
+    <button id="resumeBtn" style="display:none;">Resume</button>
+  </div>
+
+  <!-- Main app content area -->
+  <main id="appContent" tabindex="0"></main>
+
+  <!-- Main JavaScript -->
+  <script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+</body>
+</html>
