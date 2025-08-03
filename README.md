@@ -1,4 +1,4 @@
-# Study-Galazy
+# Study-Galaxy
 Galaxy Study Buddy
 Galaxy Study Buddy is a cosmic-themed, AI-powered study companion web application. It features an animated starfield background, relaxing lofi music, and multiple study tools (AI Doubt Solver, Notes Summarizer, Pomodoro Timer, Assignment Hints, Flashcard Maker, Music Player). This README will guide you through setup, usage, and how each component works—no prior context required.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
