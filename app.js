@@ -71,8 +71,23 @@ backBtn.classList.add('visible');
   });
 
   // Clicking outside sideMenu closes it
-  document.body.addEventListener('click', () => {
-    sideMenu.classList.add('hidden');
+ document.body.addEventListener('click', (event) => {
+  // If the click was inside the side menu, or on a form field, do nothing
+  if (
+    event.target.closest('#sideMenu') ||
+    event.target.closest('input, textarea, select')
+  ) {
+    return;
+  }
+  sideMenu.classList.add('hidden');
+});
+  // Clicking on sideMenu closes it
+  sideMenu.addEventListener('click', (e) => { 
+    e.stopPropagation(); // Prevent click from bubbling to body
+    // If clicking on a link, close menu
+    if (e.target.classList.contains('nav-link')) {
+      sideMenu.classList.add('hidden');
+    }
   });
 
   // Volume knob controls audio volume
@@ -1183,7 +1198,7 @@ function renderFlashcardMaker() {
 
       // Asteroid delete button
       const deleteBtn = document.createElement('button');
-      deleteBtn.innerHTML = '🪐';
+      deleteBtn.innerHTML = '☄️';
       deleteBtn.title = 'Delete flashcard';
       deleteBtn.style = `
         background:none;
@@ -1256,10 +1271,10 @@ const shootingStarCSS = `
   z-index: 1000;
   border-radius: 50%;
   filter: drop-shadow(0 0 6px #fff);
-  transition: transform 3s ease-out, opacity 3s ease-out;
+  transition: transition: transform 3s ease-out, opacity 3s ease-out;
 }
 `;
-
+//transition: transform 3s ease-out, opacity 3s ease-out;
 // Inject CSS if not already present
 if (!document.querySelector('#shooting-star-styles')) {
   const style = document.createElement('style');
@@ -1297,6 +1312,7 @@ function createShootingStar() {
       star.remove();
     }
   }, 3100);
+
 }
 
 function startShootingStarLoop() {

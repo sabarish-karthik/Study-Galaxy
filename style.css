@@ -32,6 +32,7 @@ label {
   top: 0;
   z-index: 1;
   animation: drift 140s linear infinite;
+  pointer-events: none;
   display: flex;
 }
 
@@ -128,7 +129,7 @@ label {
   box-shadow: 0 8px 32px 2px #22104071;
   display: flex;
   flex-direction: column;
-  z-index: 15;
+  z-index: 1001;
   min-width: 200px;
 }
 #sideMenu.hidden {
