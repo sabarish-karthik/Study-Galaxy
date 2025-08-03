@@ -36,6 +36,9 @@ bash:-
 cd ../frontend
 npm install
 
+run back end server by npm start cmd in path of frontend and same for backend.
+
+
 1.3.Fill in any required values (e.g. API keys).
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
