@@ -101,7 +101,7 @@ In a new terminal:
 bash
 cd frontend
 npx serve .
-Open your browser to http://localhost:5000/.
+Open your browser to local address displayed.
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 4. Features Overview
 Starfield Animation
@@ -141,7 +141,7 @@ Flashcard Maker
 Create, view, and reorder flashcards; store them in localStorage.
 
 Music Player
-Play, pause, seek, shuffle, and change tracks from a curated lofi playlist. Volume control is via a slider.
+Play, pause, seek, shuffle, and change tracks from a curated lofi playlist. Volume control is via a slider which is available in the bottom left (use only after playing music)
 
 Shooting Stars
 Random shooting star animations drift across the view at intervals, enhancing immersion.
@@ -197,6 +197,11 @@ CORS issues: If frontend fetches fail, configure CORS in server.js.
 AI service errors: Confirm AI_API_KEY is set and valid in .env.
 
 Port conflicts: Change PORT in .env or adjust frontend serve port.
+
+8.Upcoming Updates:
+Minor apparence changes.
+More tracks.
+(Above are expected to be released in 5 working days.)
 
 Enjoy studying with your Galaxy Study Buddy! For questions, feel free to open an issue.More updates and new features coming soon.We will be adding more to the project.
 
