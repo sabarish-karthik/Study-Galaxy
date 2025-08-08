@@ -12,31 +12,64 @@ Table of Contents:
 7.Troubleshooting
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 1. Installation:
-1.1Prerequisites
-  Node.js (v14 or later)
-  npm (v6 or later)
-  Git
-........................................
-1.2Steps:-
-1.Clone the repository
+Installation Guide
 
-bash:-
+Prerequisites:
+Before installing Galaxy Study Buddy, ensure you have the following installed on your system:
+Node.js (v14 or later)
+npm (v6 or later)
+Git
+
+Quick Installation (Git for Windows)
+If you're using Git for Windows, you can use the automated setup script:
+  Open Git Bash and navigate to your desired directory:
+  bash
+  cd /path/to/your/directory(where u have installed the git file)
+  
+  Run the setup script:
+  bash
+  ./setup.sh
+
+Start the backend server:
+  bash
+  cd server && npm start
+
+In a new terminal, start the frontend:
+  bash
+  cd frontend && npm start
+......................................
+Manual Installation
+Step 1: Clone the Repository
+bash
 git clone https://github.com/your-username/galaxy-study-buddy.git
 cd galaxy-study-buddy
 
-2.Install backend dependencies
+Step 2: Install Backend Dependencies
+bash:
+  cd server
+  npm install
 
-bash:_
-cd server
-npm install
+Step 3: Install Frontend Dependencies
+bash:
+  cd ../frontend
+  npm install
 
-3.Install frontend dependencies
+Step 4: Configuration
+Fill in any required configuration values (e.g., API keys) in the appropriate configuration files.(Only need to replace API key in code as per your desired model)
 
-bash:-
-cd ../frontend
-npm install
+Step 5: Launch the Application
+Start the backend server:
+bash:
+  cd server
+  npm start
 
-1.3.Fill in any required values (e.g. API keys).
+In a new terminal, start the frontend:
+bash:
+  cd frontend
+  npm start
+
+The application should now be running and accessible through your web browser.
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 2. Project Structure
